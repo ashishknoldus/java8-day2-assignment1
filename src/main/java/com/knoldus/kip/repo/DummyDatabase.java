@@ -2,15 +2,8 @@ package com.knoldus.kip.repo;
 
 import com.knoldus.kip.models.ClassRoom;
 import com.knoldus.kip.models.Student;
-import lombok.Builder;
-import lombok.Value;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 /**
  * A dummy database which is used to run the queries given in the assignment.
@@ -35,7 +28,6 @@ public class DummyDatabase {
     }
 
     /**
-     *
      * @param roomId for which the query is to be run.
      * @return Students with no subjects in a room.
      */
@@ -49,7 +41,6 @@ public class DummyDatabase {
     }
 
     /**
-     *
      * @param roomId for which the query is to be run.
      * @return Subjects of students in a room.
      */
@@ -64,6 +55,7 @@ public class DummyDatabase {
 
     /**
      * Say hello to students in a room.
+     *
      * @param roomId for which the query is to be run.
      */
     public final List<String> getStudentNamesFromRoom(final int roomId) {
