@@ -15,9 +15,6 @@ import java.util.Collections;
 /**
  * A dummy database which is used to run the queries given in the assignment.
  */
-
-@Value
-@Builder
 public class DummyDatabase {
 
     /**
