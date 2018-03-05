@@ -18,11 +18,6 @@ import java.util.Collections;
 public class DummyDatabase {
 
     /**
-     * All classrooms.
-     */
-    private ClassRooms classRooms = new ClassRooms();
-
-    /**
      * HashMap that stores the classroom with their roomId's.
      */
     private HashMap<Integer, ClassRoom> classRoomsMap = new HashMap<>();
@@ -31,12 +26,12 @@ public class DummyDatabase {
      * The constructor.
      */
     public DummyDatabase() {
-        classRoomsMap.put(classRooms.roomId1, classRooms.classRoom1);
-        classRoomsMap.put(classRooms.roomId2, classRooms.classRoom2);
-        classRoomsMap.put(classRooms.roomId3, classRooms.classRoom3);
-        classRoomsMap.put(classRooms.roomId4, classRooms.classRoom4);
-        classRoomsMap.put(classRooms.roomId5, classRooms.classRoom5);
-        classRoomsMap.put(classRooms.roomId6, classRooms.classRoom6);
+        classRoomsMap.put(ClassRooms.roomId1, ClassRooms.classRoom1);
+        classRoomsMap.put(ClassRooms.roomId2, ClassRooms.classRoom2);
+        classRoomsMap.put(ClassRooms.roomId3, ClassRooms.classRoom3);
+        classRoomsMap.put(ClassRooms.roomId4, ClassRooms.classRoom4);
+        classRoomsMap.put(ClassRooms.roomId5, ClassRooms.classRoom5);
+        classRoomsMap.put(ClassRooms.roomId6, ClassRooms.classRoom6);
     }
 
     /**
@@ -82,24 +77,24 @@ public class DummyDatabase {
     /**
      * Inner class that defines all the class rooms.
      */
-    private class ClassRooms {
+    private static class ClassRooms {
 
         //Just to avoid the 'Magic Number' checkstyle warning
-        private int roomId1 = 123;
-        private int roomId2 = 234;
-        private int roomId3 = 345;
-        private int roomId4 = 456;
-        private int roomId5 = 567;
-        private int roomId6 = 678;
+        private static int roomId1 = 123;
+        private static int roomId2 = 234;
+        private static int roomId3 = 345;
+        private static int roomId4 = 456;
+        private static int roomId5 = 567;
+        private static int roomId6 = 678;
 
-        private ClassRoom classRoom1 = ClassRoom.builder()
+        private static ClassRoom classRoom1 = ClassRoom.builder()
                 .roomId(roomId1)
                 .studentList(Optional.of(new ArrayList<>(
                         Arrays.asList(Students.student1, Students.student2)))
                 )
                 .build();
 
-        private ClassRoom classRoom2 = ClassRoom.builder()
+        private static ClassRoom classRoom2 = ClassRoom.builder()
                 .roomId(roomId2)
                 .studentList(Optional.of(new ArrayList<>(
                         Arrays.asList(Students.student3, Students.student4,
@@ -107,14 +102,14 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private ClassRoom classRoom3 = ClassRoom.builder()
+        private static ClassRoom classRoom3 = ClassRoom.builder()
                 .roomId(roomId3)
                 .studentList(Optional.of(new ArrayList<>(
                         Arrays.asList(Students.student6, Students.student7)))
                 )
                 .build();
 
-        private ClassRoom classRoom4 = ClassRoom.builder()
+        private static ClassRoom classRoom4 = ClassRoom.builder()
                 .roomId(roomId4)
                 .studentList(Optional.of(new ArrayList<>(Arrays.asList(
                         Students.student8, Students.student9,
@@ -122,14 +117,14 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private ClassRoom classRoom5 = ClassRoom.builder()
+        private static ClassRoom classRoom5 = ClassRoom.builder()
                 .roomId(roomId5)
                 .studentList(Optional.of(new ArrayList<>(
                         Collections.singletonList(Students.student11)))
                 )
                 .build();
 
-        private ClassRoom classRoom6 = ClassRoom.builder()
+        private static ClassRoom classRoom6 = ClassRoom.builder()
                 .roomId(roomId6)
                 .studentList(Optional.empty())
                 .build();
