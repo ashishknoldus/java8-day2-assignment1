@@ -18,11 +18,6 @@ import java.util.Collections;
 public class DummyDatabase {
 
     /**
-     * All students.
-     */
-    private Students students = new Students();
-
-    /**
      * All classrooms.
      */
     private ClassRooms classRooms = new ClassRooms();
@@ -100,37 +95,37 @@ public class DummyDatabase {
         private ClassRoom classRoom1 = ClassRoom.builder()
                 .roomId(roomId1)
                 .studentList(Optional.of(new ArrayList<>(
-                        Arrays.asList(students.student1, students.student2)))
+                        Arrays.asList(Students.student1, Students.student2)))
                 )
                 .build();
 
         private ClassRoom classRoom2 = ClassRoom.builder()
                 .roomId(roomId2)
                 .studentList(Optional.of(new ArrayList<>(
-                        Arrays.asList(students.student3, students.student4,
-                                students.student5)))
+                        Arrays.asList(Students.student3, Students.student4,
+                                Students.student5)))
                 )
                 .build();
 
         private ClassRoom classRoom3 = ClassRoom.builder()
                 .roomId(roomId3)
                 .studentList(Optional.of(new ArrayList<>(
-                        Arrays.asList(students.student6, students.student7)))
+                        Arrays.asList(Students.student6, Students.student7)))
                 )
                 .build();
 
         private ClassRoom classRoom4 = ClassRoom.builder()
                 .roomId(roomId4)
                 .studentList(Optional.of(new ArrayList<>(Arrays.asList(
-                        students.student8, students.student9,
-                        students.student10)))
+                        Students.student8, Students.student9,
+                        Students.student10)))
                 )
                 .build();
 
         private ClassRoom classRoom5 = ClassRoom.builder()
                 .roomId(roomId5)
                 .studentList(Optional.of(new ArrayList<>(
-                        Collections.singletonList(students.student11)))
+                        Collections.singletonList(Students.student11)))
                 )
                 .build();
 
@@ -143,21 +138,21 @@ public class DummyDatabase {
     /**
      * Inner class that defines all the students.
      */
-    private class Students {
+    private static class Students {
 
-        private int rollNumber1 = 1;
-        private int rollNumber2 = 2;
-        private int rollNumber3 = 3;
-        private int rollNumber4 = 4;
-        private int rollNumber5 = 5;
-        private int rollNumber6 = 6;
-        private int rollNumber7 = 7;
-        private int rollNumber8 = 8;
-        private int rollNumber9 = 9;
-        private int rollNumber10 = 10;
-        private int rollNumber11 = 11;
+        private static int rollNumber1 = 1;
+        private static int rollNumber2 = 2;
+        private static int rollNumber3 = 3;
+        private static int rollNumber4 = 4;
+        private static int rollNumber5 = 5;
+        private static int rollNumber6 = 6;
+        private static int rollNumber7 = 7;
+        private static int rollNumber8 = 8;
+        private static int rollNumber9 = 9;
+        private static int rollNumber10 = 10;
+        private static int rollNumber11 = 11;
 
-        private Student student1 = Student.builder()
+        private static Student student1 = Student.builder()
                 .name("Ajay Dhiman")
                 .rollNumber(rollNumber1)
                 .subjects(Optional.of(new ArrayList<>(
@@ -165,13 +160,13 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student2 = Student.builder()
+        private static Student student2 = Student.builder()
                 .name("Vijay Chauhan")
                 .rollNumber(rollNumber2)
                 .subjects(Optional.of(Collections.emptyList())) //No subject
                 .build();
 
-        private Student student3 = Student.builder()
+        private static Student student3 = Student.builder()
                 .name("Neha Kapoor")
                 .rollNumber(rollNumber3)
                 .subjects(Optional.of(new ArrayList<>(
@@ -180,7 +175,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student4 = Student.builder()
+        private static Student student4 = Student.builder()
                 .name("Mona Sahoo")
                 .rollNumber(rollNumber4)
                 .subjects(Optional.of(new ArrayList<>(Arrays.asList("Physics",
@@ -188,7 +183,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student5 = Student.builder()
+        private static Student student5 = Student.builder()
                 .name("Sajit Radhakrishnan")
                 .rollNumber(rollNumber5)
                 .subjects(Optional.of(new ArrayList<>(Arrays.asList("History",
@@ -196,7 +191,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student6 = Student.builder()
+        private static Student student6 = Student.builder()
                 .name("Sachin Goel")
                 .rollNumber(rollNumber6)
                 .subjects(Optional.of(new ArrayList<>(
@@ -204,7 +199,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student7 = Student.builder()
+        private static Student student7 = Student.builder()
                 .name("Krishna Dhiman")
                 .rollNumber(rollNumber7)
                 .subjects(Optional.of(new ArrayList<>(
@@ -212,13 +207,13 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student8 = Student.builder()
+        private static Student student8 = Student.builder()
                 .name("Nivica Malhotra")
                 .rollNumber(rollNumber8)
                 .subjects(Optional.of(Collections.emptyList())) //No subject
                 .build();
 
-        private Student student9 = Student.builder()
+        private static Student student9 = Student.builder()
                 .name("Ghazal")
                 .rollNumber(rollNumber9)
                 .subjects(Optional.of(new ArrayList<>(
@@ -226,7 +221,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student10 = Student.builder()
+        private static Student student10 = Student.builder()
                 .name("Apoorva Saini")
                 .rollNumber(rollNumber10)
                 .subjects(Optional.of(new ArrayList<>(Arrays.asList("History",
@@ -234,7 +229,7 @@ public class DummyDatabase {
                 )
                 .build();
 
-        private Student student11 = Student.builder()
+        private static Student student11 = Student.builder()
                 .name("Kalpana Rana")
                 .rollNumber(rollNumber11)
                 .subjects(Optional.of(new ArrayList<>(
