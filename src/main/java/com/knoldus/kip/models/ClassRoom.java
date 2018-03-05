@@ -45,11 +45,12 @@ public class ClassRoom {
     }
 
     /**
-     * Print the "Hello student" to each student in `this` classroom.
+     * This method returns the list of the names of students.
      */
-    public final void sayHelloToStudents() {
-        studentList.orElseGet(ArrayList::new)
-                .forEach(student -> System.out.println("Hello Student - "
-                        + student.getName()));
+    public final List<String> getStudentNames() {
+        return studentList.orElseGet(ArrayList::new)
+                .stream()
+                .map(Student::getName)
+                .collect(Collectors.toList());
     }
 }

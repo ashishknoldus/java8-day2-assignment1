@@ -79,11 +79,11 @@ public class DummyDatabase {
      * Say hello to students in a room.
      * @param roomId for which the query is to be run.
      */
-    public final void sayHelloToRoomStudents(final int roomId) {
+    public final List<String> getStudentNamesFromRoom(final int roomId) {
         if (classRoomsMap.containsKey(roomId)) {
-            classRoomsMap.get(roomId).sayHelloToStudents();
+            return classRoomsMap.get(roomId).getStudentNames();
         } else {
-            System.out.println("No room exists with roomId : " + roomId);
+            return new ArrayList<>();
         }
     }
 

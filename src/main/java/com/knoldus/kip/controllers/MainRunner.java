@@ -2,6 +2,8 @@ package com.knoldus.kip.controllers;
 
 import com.knoldus.kip.repo.DummyDatabase;
 
+import java.util.List;
+
 
 /**
  * The class with main() method.
@@ -49,16 +51,20 @@ public final class MainRunner {
                 + db.getSubjectsOfStudents(678).size());
 
         System.out.println("\nSay Hello To Students In Room 123 :");
-        db.sayHelloToRoomStudents(123);
+        printHelloMsg(db.getStudentNamesFromRoom(123));
         System.out.println("\nSay Hello To Students In Room 234 :");
-        db.sayHelloToRoomStudents(234);
+        printHelloMsg(db.getStudentNamesFromRoom(234));
         System.out.println("\nSay Hello To Students In Room 345 :");
-        db.sayHelloToRoomStudents(345);
+        printHelloMsg(db.getStudentNamesFromRoom(345));
         System.out.println("\nSay Hello To Students In Room 456 :");
-        db.sayHelloToRoomStudents(456);
+        printHelloMsg(db.getStudentNamesFromRoom(456));
         System.out.println("\nSay Hello To Students In Room 567 :");
-        db.sayHelloToRoomStudents(567);
+        printHelloMsg(db.getStudentNamesFromRoom(567));
         System.out.println("\nSay Hello To Students In Room 678 :");
-        db.sayHelloToRoomStudents(678);
+        printHelloMsg(db.getStudentNamesFromRoom(678));
+    }
+
+    private static void printHelloMsg(List<String> list) {
+        list.forEach(member -> System.out.println("Hello Student - " + member));
     }
 }
